@@ -1,0 +1,97 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Discovery & Scope Mapping",
+    description: "We dive deep into your business logic, defining target requirements, scoping milestones, and establishing KPIs to align code with your strategic goals."
+  },
+  {
+    step: "02",
+    title: "Architectural Engineering",
+    description: "Designing database models, scalable microservices, network topology diagrams, and beautiful user interfaces to establish a robust bedrock."
+  },
+  {
+    step: "03",
+    title: "Iterative Sprint Execution",
+    description: "Developing code in agile sprints. Our transparent workflow ensures you see working product milestones at every stage, validated by automated integration checks."
+  },
+  {
+    step: "04",
+    title: "Rigorous QA & Stress Tests",
+    description: "Running automated test suites, accessibility checks, performance profiling, and security stress tests to guarantee a bulletproof deployment."
+  },
+  {
+    step: "05",
+    title: "Liftoff & Continuous Tuning",
+    description: "Configuring auto-scaling orchestrations and zero-downtime releases, backed by automated anomaly tracking and responsive SLA system upgrades."
+  }
+];
+---
+
+<section id="process" class="py-24 relative overflow-hidden">
+  <!-- Glowing circuit backdrop background -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-25"></div>
+  <div class="absolute top-[20%] right-[-10%] w-[30vw] h-[30vw] rounded-full bg-blue-900/10 blur-[120px] pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-2xl mb-20">
+      <div class="flex items-center gap-2 text-[#e94560] font-semibold text-xs uppercase tracking-[0.2em] mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e94560]"></span>
+        Development Philosophy
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Our Development Blueprint
+      </h2>
+      <p class="text-slate-400 font-light mt-4 leading-relaxed">
+        Building custom software with purpose requires a structured, repeatable engineering process. Here is how we take your vision from zero to production.
+      </p>
+    </div>
+
+    <!-- Timeline Grid for Process -->
+    <div class="relative">
+      <!-- Vertical connecting line (Desktop only) -->
+      <div class="hidden lg:block absolute left-[50px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#e94560] via-blue-950 to-slate-900 pointer-events-none -z-10"></div>
+      
+      <div class="space-y-12">
+        {steps.map((step, index) => (
+          <div class="flex flex-col lg:flex-row gap-6 lg:gap-16 items-start relative group">
+            
+            <!-- Step Number Node -->
+            <div class="flex items-center gap-4 lg:block flex-shrink-0">
+              <div class="w-24 h-24 rounded-2xl glassmorphic border-white/5 flex items-center justify-center text-3xl font-black text-white relative group-hover:border-[#e94560]/30 transition-all duration-300 shadow-xl">
+                <!-- Circuit accent nodes inside number container -->
+                <div class="absolute -top-1 -left-1 w-2 h-2 rounded-full bg-slate-900 border border-white/10 group-hover:border-[#e94560]/40 transition-colors"></div>
+                <div class="absolute -bottom-1 -right-1 w-2 h-2 rounded-full bg-slate-900 border border-white/10 group-hover:border-[#e94560]/40 transition-colors"></div>
+                
+                <span class="bg-gradient-to-br from-white to-slate-400 text-transparent bg-clip-text font-mono tracking-tighter">
+                  {step.step}
+                </span>
+              </div>
+              
+              <!-- Divider for mobile view inline -->
+              <div class="lg:hidden h-[2px] flex-1 bg-gradient-to-r from-blue-900 to-transparent"></div>
+            </div>
+
+            <!-- Content Card -->
+            <div class="glassmorphic p-6 md:p-8 rounded-2xl border-white/5 flex-1 relative overflow-hidden group-hover:border-[#e94560]/10 transition-colors duration-300">
+              <!-- Glowing trace flow line indicator -->
+              <div class="absolute top-0 left-0 w-1 h-full bg-[#1e3a8a] group-hover:bg-[#e94560] transition-colors duration-300"></div>
+              
+              <div class="max-w-3xl">
+                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#e94560] transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p class="text-slate-400 text-sm sm:text-base font-light leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

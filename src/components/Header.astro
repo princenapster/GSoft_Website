@@ -1,0 +1,133 @@
+---
+---
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 group focus:outline-none" aria-label="G-Soft Business Solutions Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" class="h-[44px] w-auto" aria-hidden="true">
+        <defs>
+          <linearGradient id="header_mark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:rgba(255,255,255,0.12)"/>
+            <stop offset="100%" style="stop-color:rgba(255,255,255,0.06)"/>
+          </linearGradient>
+        </defs>
+        <!-- Mark background square -->
+        <rect x="2" y="2" width="56" height="56" rx="14"
+          fill="url(#header_mark)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+        <!-- Circuit lines -->
+        <line x1="12" y1="30" x2="20" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+        <line x1="40" y1="30" x2="48" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+        <line x1="30" y1="12" x2="30" y2="18" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+        <line x1="30" y1="42" x2="30" y2="48" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+        <!-- Circuit nodes -->
+        <circle cx="12" cy="30" r="2" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="48" cy="30" r="2" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="30" cy="12" r="2" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="30" cy="48" r="2" fill="rgba(255,255,255,0.25)"/>
+
+        <!-- Red accent dot -->
+        <circle cx="44" cy="16" r="3" fill="#e94560" class="group-hover:scale-125 transition-transform duration-300 origin-center" opacity="0.9"/>
+
+        <!-- G letterform -->
+        <text x="30" y="40" text-anchor="middle"
+          font-family="Segoe UI, system-ui, sans-serif"
+          font-size="22" font-weight="900" fill="#ffffff"
+          letter-spacing="-1">G</text>
+
+        <!-- Cursor underline -->
+        <rect x="22" y="43" width="16" height="2.5" rx="1.2" fill="#e94560"/>
+
+        <!-- G-Soft text -->
+        <text x="70" y="24" font-family="Segoe UI, system-ui, sans-serif"
+          font-size="20" font-weight="900" fill="#ffffff" letter-spacing="-0.5">
+          <tspan fill="#e94560">G-Soft</tspan> Business
+        </text>
+
+        <!-- Solutions text -->
+        <text x="70" y="41" font-family="Segoe UI, system-ui, sans-serif"
+          font-size="14" font-weight="700" fill="rgba(255,255,255,0.6)" letter-spacing="-0.3">Solutions</text>
+
+        <!-- Tagline -->
+        <text x="70" y="56" font-family="Segoe UI, system-ui, sans-serif"
+          font-size="11.5" font-weight="600" fill="rgba(255,255,255,0.4)" letter-spacing="1"
+          text-transform="uppercase">Solutions with Purpose.</text>
+      </svg>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Services</a>
+      <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
+      <a href="#process" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Our Process</a>
+      <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-blue-700 to-indigo-800 text-white border border-blue-500/30 hover:border-[#e94560]/40 shadow-lg shadow-indigo-950/40 transition-all duration-300 hover:shadow-[#e94560]/10 hover:-translate-y-0.5">
+        Let's Talk
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900/60 border border-transparent hover:border-slate-800 transition-all focus:outline-none" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="hidden fixed inset-x-0 top-[80px] bg-slate-950/95 backdrop-blur-xl border-b border-slate-900 shadow-2xl py-6 px-8 transition-all duration-300 ease-in-out md:hidden">
+    <nav class="flex flex-col gap-5">
+      <a href="#services" class="mobile-nav-link text-lg font-medium text-slate-300 hover:text-white py-2 border-b border-slate-900 transition-colors">Services</a>
+      <a href="#projects" class="mobile-nav-link text-lg font-medium text-slate-300 hover:text-white py-2 border-b border-slate-900 transition-colors">Projects</a>
+      <a href="#process" class="mobile-nav-link text-lg font-medium text-slate-300 hover:text-white py-2 border-b border-slate-900 transition-colors">Our Process</a>
+      <a href="#contact" class="mobile-nav-link px-5 py-3 rounded-xl text-center font-semibold bg-gradient-to-r from-blue-700 to-indigo-800 text-white border border-blue-500/30 hover:border-[#e94560]/40 transition-all">
+        Let's Talk
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('main-header');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const menuIcon = document.getElementById('menu-icon');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  // Glassmorphic header effect on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.remove('py-5');
+      header.classList.add('py-3', 'glassmorphic', 'border-b', 'border-white/5', 'shadow-lg', 'shadow-slate-950/25');
+    } else {
+      header.classList.remove('py-3', 'glassmorphic', 'border-b', 'border-white/5', 'shadow-lg', 'shadow-slate-950/25');
+      header.classList.add('py-5');
+    }
+  });
+
+  // Toggle mobile drawer
+  let isDrawerOpen = false;
+  function toggleDrawer() {
+    isDrawerOpen = !isDrawerOpen;
+    if (isDrawerOpen) {
+      mobileDrawer.classList.remove('hidden');
+      menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+      header.classList.add('bg-slate-950');
+    } else {
+      mobileDrawer.classList.add('hidden');
+      menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      if (window.scrollY <= 20) {
+        header.classList.remove('bg-slate-950');
+      }
+    }
+  }
+
+  mobileMenuBtn.addEventListener('click', toggleDrawer);
+
+  // Close drawer when clicking nav links
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isDrawerOpen) toggleDrawer();
+    });
+  });
+</script>

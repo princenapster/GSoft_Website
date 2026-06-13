@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "G-Soft Business Solutions | Solutions with Purpose", 
+	description = "G-Soft Business Solutions designs and delivers high-performance enterprise systems, custom applications, and business automation platforms with purpose." 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/images/GSoft_Logo_Dark.svg" />
+		
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/images/GSoft_Logo_Dark.png" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="/images/GSoft_Logo_Dark.png" />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="min-h-screen bg-slate-950 bg-grid-pattern selection:bg-[#e94560]/30 selection:text-white">
+		<div class="fixed inset-0 bg-gradient-to-b from-[#0a1128]/50 via-transparent to-[#020617] pointer-events-none -z-10"></div>
+		
+		<!-- Subtle glow light in top right -->
+		<div class="fixed top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#1e3a8a]/15 blur-[120px] pointer-events-none -z-10"></div>
+		<!-- Subtle glow light in bottom left -->
+		<div class="fixed bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-[#e94560]/5 blur-[100px] pointer-events-none -z-10"></div>
+		
+		<slot />
+	</body>
+</html>

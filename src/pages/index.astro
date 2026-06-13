@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import FeaturedProjects from '../components/FeaturedProjects.astro';
+import Process from '../components/Process.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="G-Soft Business Solutions | Solutions with Purpose" 
+  description="G-Soft Business Solutions designs and engineers high-performance enterprise applications, custom dashboards, automation engines, and cloud native architectures."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Services />
+    <FeaturedProjects />
+    <Process />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>
